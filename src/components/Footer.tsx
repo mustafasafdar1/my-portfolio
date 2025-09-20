@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="space-y-4"
             >
-              <h3 className="text-xl sm:text-2xl font-bold gradient-text">Mujtaba Almas</h3>
+              <h3 className="text-xl sm:text-2xl font-bold gradient-text">Mustafa Safdar</h3>
               <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                 A passionate Python Developer creating efficient applications 
                 with modern technologies and clean code.
