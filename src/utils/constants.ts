@@ -1,5 +1,5 @@
 export const SOCIAL_LINKS = {
-  github: 'https://github.com/mustafasfdar1',
+  github: 'https://github.com/mustafasafdar1',
   linkedin: 'https://linkedin.com/in/mustafasafdar',
   twitter: 'https://twitter.com/yourusername',
   email: 'mailto:mustafasafdar87@gmail.com',
