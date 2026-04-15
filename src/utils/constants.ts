@@ -5,13 +5,13 @@ export const SOCIAL_LINKS = {
   email: 'mailto:mujtabaalmas7@gmail.com',
 } as const;
 
-export const GITHUB_USERNAME = 'mujtabaalmas';
+export const GITHUB_USERNAME = 'mustafasafdar1';
 
 export const CONTACT_INFO = {
-  email: 'mujtabaalmas7@gmail.com',
+  email: 'mustafasafdar87@gmail.com',
   phone: '+1 (555) 123-4567',
   location: 'Unknown',
-} as const; 
+} as const;
 
 export const NAVIGATION_ITEMS = [
   { name: 'Home', href: '#home' },
