@@ -12,7 +12,7 @@ const Skills: React.FC = () => {
   const skills: Skill[] = [
     { name: 'Python', level: 5, category: 'programming' },
     { name: 'Express', level: 4, category: 'frameworks' },
-    { name: 'Restful API', level: 4, category: 'frameworks' },
+    { name: 'REST API', level: 4, category: 'frameworks' },
     { name: 'MySql', level: 4, category: 'database' },
     { name: 'GitHub', level: 4, category: 'tools' },
     { name: 'Postman', level: 4, category: 'tools' },
@@ -30,7 +30,7 @@ const Skills: React.FC = () => {
     skills: 'Core Skills'
   };
 
-  const getCategorySkills = useMemo(() => (category: keyof typeof categories) => 
+  const getCategorySkills = useMemo(() => (category: keyof typeof categories) =>
     skills.filter(skill => skill.category === category), [skills]);
 
   return (
