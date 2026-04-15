@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed navbar height */
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* GitHub-like mobile optimizations */
+  @media (max-width: 640px) {
+    body {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-200;
+  }
+  
+  .section-padding {
+    @apply py-12 sm:py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent;
+  }
+  
+  /* Navbar hover effects */
+  .nav-link {
+    @apply relative overflow-hidden transition-all duration-300 ease-in-out;
+  }
+  
+  .nav-link::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary-400/10 to-purple-400/10 opacity-0 transition-opacity duration-300;
+  }
+  
+  .nav-link:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* Responsive hover effects */
+  @media (max-width: 640px) {
+    .nav-link:hover {
+      @apply transform translate-x-1 scale-105;
+    }
+    
+    /* Reduce animation intensity on very small screens */
+    .group:hover .animate-pulse-glow {
+      animation-duration: 3s;
+    }
+  }
+  
+  @media (min-width: 641px) and (max-width: 768px) {
+    .nav-link:hover {
+      @apply transform translate-x-1 scale-105;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .nav-link:hover {
+      @apply transform scale-105;
+    }
+    
+    /* Subtle pulse glow for desktop */
+    .group:hover .animate-pulse-glow {
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+    }
+  }
+  
+  /* Touch device optimizations */
+  @media (hover: none) and (pointer: coarse) {
+    .group:hover .animate-pulse-glow {
+      animation: none;
+    }
+    
+    .group:active {
+      @apply transform scale-95;
+    }
+  }
+}
+
+@keyframes grid-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+@keyframes slideInFromLeft {
+  0% { 
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% { 
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { 
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6), 0 0 30px rgba(147, 51, 234, 0.4);
+  }
+}
+
+@keyframes bounceIn {
+  0% { 
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% { 
+    transform: scale(1.05);
+  }
+  70% { 
+    transform: scale(0.9);
+  }
+  100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
