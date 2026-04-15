@@ -5,33 +5,33 @@ import { useRef } from 'react';
 import { Skill } from '../types';
 import AnimatedBackground from './AnimatedBackground';
 
+const skills: Skill[] = [
+  { name: 'Python', level: 5, category: 'programming' },
+  { name: 'Express', level: 4, category: 'frameworks' },
+  { name: 'REST API', level: 4, category: 'frameworks' },
+  { name: 'MySql', level: 4, category: 'database' },
+  { name: 'GitHub', level: 4, category: 'tools' },
+  { name: 'Postman', level: 4, category: 'tools' },
+  { name: 'VS Code', level: 5, category: 'tools' },
+  { name: 'DBMS', level: 4, category: 'database' },
+  { name: 'Problem Solving', level: 5, category: 'skills' },
+  { name: 'Web Applications', level: 4, category: 'skills' },
+];
+
+const categories = {
+  programming: 'Programming',
+  frameworks: 'Frameworks',
+  database: 'Database',
+  tools: 'Tools',
+  skills: 'Core Skills'
+};
+
 const Skills: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const skills: Skill[] = [
-    { name: 'Python', level: 5, category: 'programming' },
-    { name: 'Express', level: 4, category: 'frameworks' },
-    { name: 'REST API', level: 4, category: 'frameworks' },
-    { name: 'MySql', level: 4, category: 'database' },
-    { name: 'GitHub', level: 4, category: 'tools' },
-    { name: 'Postman', level: 4, category: 'tools' },
-    { name: 'VS Code', level: 5, category: 'tools' },
-    { name: 'DBMS', level: 4, category: 'database' },
-    { name: 'Problem Solving', level: 5, category: 'skills' },
-    { name: 'Web Applications', level: 4, category: 'skills' },
-  ];
-
-  const categories = {
-    programming: 'Programming',
-    frameworks: 'Frameworks',
-    database: 'Database',
-    tools: 'Tools',
-    skills: 'Core Skills'
-  };
-
   const getCategorySkills = useMemo(() => (category: keyof typeof categories) =>
-    skills.filter(skill => skill.category === category), [skills]);
+    skills.filter(skill => skill.category === category), []);
 
   return (
     <AnimatedBackground>

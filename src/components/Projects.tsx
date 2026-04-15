@@ -87,7 +87,7 @@ const Projects: React.FC = () => {
                     {project.description}
                   </p>
                   
-                  {/* <div className="flex flex-wrap gap-1 sm:gap-1.5 lg:gap-2 mb-3 sm:mb-4 lg:mb-6">
+                  <div className="flex flex-wrap gap-1 sm:gap-1.5 lg:gap-2 mb-3 sm:mb-4 lg:mb-6">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
@@ -96,7 +96,7 @@ const Projects: React.FC = () => {
                         {tech}
                       </span>
                     ))}
-                  </div> */}
+                  </div>
                   
                   <div className="flex gap-4">
                     <a

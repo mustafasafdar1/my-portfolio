@@ -62,11 +62,7 @@ const Header: React.FC = () => {
               <button
                 key={item.name}
                 onClick={() => handleScrollToSection(item.href)}
-                className={`group relative font-medium transition-all duration-300 ease-in-out ${
-                  isScrolled
-                    ? 'text-white hover:text-primary-400'
-                    : 'text-white hover:text-primary-400'
-                }`}
+                className="group relative font-medium transition-all duration-300 ease-in-out text-white hover:text-primary-400"
               >
                 <span className="relative z-10 transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-lg group-hover:drop-shadow-primary-400/30 group-hover:shadow-lg group-hover:shadow-primary-400/20">
                   {item.name}
