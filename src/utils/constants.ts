@@ -1,8 +1,8 @@
 export const SOCIAL_LINKS = {
   github: 'https://github.com/mujtabaalmas',
-  linkedin: 'https://linkedin.com/in/mujtabaalmas',
+  linkedin: 'https://linkedin.com/in/mustafasafdar',
   twitter: 'https://twitter.com/yourusername',
-  email: 'mailto:mujtabaalmas7@gmail.com',
+  email: 'mailto:mustafasafdar87@gmail.com',
 } as const;
 
 export const GITHUB_USERNAME = 'mustafasafdar1';
